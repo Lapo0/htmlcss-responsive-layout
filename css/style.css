@@ -107,6 +107,10 @@ header{
     color: currentColor;
 }
 
+.header .logo{
+    padding: 0 15px;
+}
+
 /**************************************
 SECTION INFO
 **************************************/
@@ -123,9 +127,8 @@ section.info{
     height: 100%;
 }
 
-.info 
-.col-8,
-.col-4 {
+.info .col-8,
+.info .col-4 {
     padding: 0 20px;
 }
 
@@ -159,7 +162,7 @@ section.info{
 }
 
 .info button::before{
-    content: "\f179";
+    content: "\f5d1";
     font-family: "Font Awesome 6 Free";
     font-weight: 900;
     padding-right: 10px;
@@ -279,6 +282,7 @@ TESTIMONIALS
 
 .testimonials .titol p{
     line-height: 30px;
+    padding-bottom: 24px;
 }
 
 .testimonials .people-card{
@@ -303,11 +307,10 @@ TESTIMONIALS
 }
 
 .testimonials .profile-text{
-    padding: 0 80px;
+    padding: 20px 80px;
     line-height: 30px;
     color: white;
     font-size: 20px;
-    margin-bottom: 36px;
 }
 
 .testimonials .profile-text blockquote::before{
@@ -322,8 +325,140 @@ TESTIMONIALS
     font-weight: 900;
 }
 
-.testimonials .profile-text p{
-    padding-top: 42px;
+.testimonials .profile-text p, .profile-text blockquote{
+    font-size: 22px;
+    padding: 20px 0;
+    line-height: 45px;
+}
+
+/************************************
+BENEFITS
+************************************/
+
+.benefits{
+    background-color: var(--purple);
+    padding: 50px 0;
+}
+
+.benefits .row{
+    row-gap: 44px;
+    margin: 0 -22px;
+}
+
+.benefits .col-12:first-child{
+    text-align: center;
+    color: white;
+    font-size: 30px;
+}
+
+.benefits h1{
+    font-size: 75px;
+}
+
+.benefits .col-4{
+    padding: 0 22px;
+}
+
+.benefits .col-4 .card{
+    padding: 0 38px;
+    background-color: white;
+    height: 100%;
+    border-radius: 25px;
+
+}
+
+.benefits .col-4 p:first-child{
+    color: var(--purple);
+    font-size: 100px;
+    font-weight: bolder;
+    padding-top: 40px;
+}
+
+.benefits .col-4 h2{
+    color: var(--purple);
+    padding: 30px 0;
+    font-size: 30px;
+}
+
+.benefits .col-4 p.index{
+    line-height: 35px;
+}
+
+.benefits .card button {
+    line-height: 55px;
+    padding: 0 60px;
+    background-color: var(--purple);
+    border: 0;
+    border-radius: 25px;
+    color: white;
+    font-size: 18px;
+    margin: 46px 0;
+}
+
+/************************************
+SECTION ABOUT US
+************************************/
+
+.about-us{
+    padding: 130px 0;
+}
+
+.about-us .row{
+    margin: 0 -75px;
+}
+
+.about-us .row> *{
+    padding: 0 75px;
+}
+
+.about-us h1{
+    font-size: 100px;
+    color: var(--purple);
+}
+
+.about-us .col-8 p{
+    padding-top: 86px;
+    line-height: 60px;
+    font-size: 25px;
+}
+
+.about-us .about-us-card img{
+    border-radius: 50%;
+    width: 80%;
+}
+
+.about-us .about-us-img{
+    position: relative;
+}
+
+.about-us .about-us-img i{
+    position: absolute;
+    font-size: 100px;
+    right: 77px;
+    color: var(--purple);
+}
+
+.about-us .about-us-card h2{
+    font-size: 35px;
+    font-weight: bolder;
+    color: var(--purple);
+    padding: 86px 0;
+}
+
+.about-us .about-us-card button {
+    line-height: 45px;
+    padding: 0 30px;
+    background-color: var(--purple);
+    border: 0;
+    border-radius: 25px;
+    color: white;
+    font-size: 18px;
+}
+
+.about-us .about-us-card button::before{
+    content: "\f3f5";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
 }
 
 /************************************
@@ -363,7 +498,30 @@ MEDIA QUERY
         margin: 0 auto;
     }
 
+    .testimonials .profile-text{
+        padding: 20px;
+    }
+
+    .benefits .col-4{
+        flex-basis: 50%;
+    }
     
+    .benefits h1{
+        font-size: 45px;
+    }
+    
+    .benefits .col-4 h2{
+    padding: 20px 0;
+    }
+
+    .benefits .col-4 p:first-child{
+    padding-top: 30px;
+    font-size: 75px;
+    }
+
+    .benefits .card button {
+    margin: 30px 0;
+    }
     
 }
 
@@ -384,5 +542,34 @@ MEDIA QUERY
     .testimonials .profile-img{
         margin: 0 auto;
     }
+
+    .testimonials .people-card .row {
+        row-gap: 0;
+    }
+
     
+    .testimonials .profile-text blockquote{
+        padding-top: 0;
+    }
+
+    .benefits .col-4{
+        flex-basis: 100%;
+    }
+    
+    .benefits h1{
+        font-size: 35px;
+    }
+
+    .benefits .col-4 p:first-child{
+    padding-top: 30px;
+    font-size: 50px;
+    }
+
+    .benefits .card button {
+    margin: 25px 0;
+    }
+
+    .benefits .col-4 p.index {
+    line-height: 30px;  
+    }
 }
