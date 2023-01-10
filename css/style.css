@@ -250,11 +250,88 @@ PLANNING
     font-size: 20px;
 }
 
+/**************************************
+TESTIMONIALS
+**************************************/
+
+.testimonials{
+    padding: 80px 0;
+}
+
+.testimonials .row{
+    row-gap: 36px;
+}
+
+.testimonials .titol{
+    text-align: center;
+}
+
+.testimonials .titol h1{
+    padding: 40px 0;
+    font-size: 50px;
+    color: var(--purple);
+}
+
+.testimonials .titol p:first-child{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.testimonials .titol p{
+    line-height: 30px;
+}
+
+.testimonials .people-card{
+    background-color: var(--purple);
+    border-radius: 50px;
+}
+
+.testimonials .people-card .row{
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.testimonials .people-card .profile-img{
+    padding: 36px 12px;
+}
+
+.testimonials .people-card img{
+    width: 260px;
+    height: 260px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.testimonials .profile-text{
+    padding: 0 80px;
+    line-height: 30px;
+    color: white;
+    font-size: 20px;
+    margin-bottom: 36px;
+}
+
+.testimonials .profile-text blockquote::before{
+    content: "\f10d";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+}
+
+.testimonials .profile-text blockquote::after{
+    content: "\f10e";
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+}
+
+.testimonials .profile-text p{
+    padding-top: 42px;
+}
+
 /************************************
 MEDIA QUERY
 ************************************/
 
 @media only screen and (max-width: 991px) {
+
     .container,
     .small-container{
         padding: 0 30px;
@@ -268,7 +345,7 @@ MEDIA QUERY
         display: none;
     }
 
-    .info .box.row .col-6{
+    .info .box .col-6{
         flex-basis: 100%;
         text-align: left;
     }
@@ -286,9 +363,6 @@ MEDIA QUERY
         margin: 0 auto;
     }
 
-    .planning .col-12 h2{
-        font-size: 80px;
-    }
     
     
 }
@@ -297,6 +371,18 @@ MEDIA QUERY
 
     .info [class^=col-]{
         flex-basis: 100%;
+    }
+
+    .testimonials .people-card .row{
+        flex-wrap: wrap;
+    }
+
+    .testimonials .people-card{
+        text-align: center;
+    }
+    
+    .testimonials .profile-img{
+        margin: 0 auto;
     }
     
 }
