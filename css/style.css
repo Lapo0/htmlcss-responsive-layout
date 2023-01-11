@@ -535,6 +535,29 @@ START
 }
 
 /************************************
+FOOTER
+************************************/
+
+footer{
+    background-color: var(--dark);
+    padding: 82px 0;
+}
+
+.footer .extra-small-container{
+    text-align: center;
+    padding: 0 94px;
+    color: white;
+}
+
+.footer .extra-small-container p:first-child{
+    padding-bottom: 86px;
+}
+
+.footer .extra-small-container p a{
+    text-decoration: underline;
+}
+
+/************************************
 MEDIA QUERY
 ************************************/
 
@@ -761,6 +784,8 @@ MEDIA QUERY
         padding: 0 75px;
     }
 
+    .footer .extra-small-container {
+    padding: 0 20px;
     
 
 }
