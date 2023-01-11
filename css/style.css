@@ -41,6 +41,11 @@ Container
     margin: 0 auto;
 }
 
+.extra-small-container{
+    max-width: 702px;
+    margin: 0 auto;
+}
+
 /*********
 Row
 ********/
@@ -173,7 +178,12 @@ section.info{
 }
 
 .info .phone-img{
-    width: 250px;
+    width: 75%;
+    margin: 0 auto;
+}
+
+.info .phone-img .phone{
+    display: block;
 }
 
 .info .col-4{
@@ -433,7 +443,7 @@ SECTION ABOUT US
 
 .about-us .about-us-img i{
     position: absolute;
-    font-size: 100px;
+    font-size: 5vw;
     right: 77px;
     color: var(--purple);
 }
@@ -442,7 +452,7 @@ SECTION ABOUT US
     font-size: 35px;
     font-weight: bolder;
     color: var(--purple);
-    padding: 86px 0;
+    padding: 36px 0;
 }
 
 .about-us .about-us-card button {
@@ -462,18 +472,89 @@ SECTION ABOUT US
 }
 
 /************************************
+START
+************************************/
+
+.start{
+    background-color: var(--purple);
+    padding: 75px 0;
+}
+
+.start .extra-small-container .row{
+    flex-direction: column;
+    align-items: center;
+}
+
+.start .col-12 > *{
+    margin: 0 auto;
+    text-align: center;
+    color: white;
+}
+
+.start .start_titol p{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.start .start_titol h1{
+    padding: 40px 0;
+    font-size: 59px;
+}
+
+.start .start_login{
+    padding: 0 50px;
+}
+
+.start .start_login h2{
+    color: #fdc15f;
+    font-size: 100px;
+    padding-bottom: 72px;
+}
+
+.start .start_login p{
+    font-size: 20px;
+}
+
+.start .start_login a button{
+    border: 0;
+    border-radius: 50px;
+    padding: 0 100px;
+    line-height: 90px;
+    margin: 50px 0;
+    color: var(--purple);
+    font-size: 1rem;
+}
+
+.start .start_login p.copyright{
+    font-size: 16px;
+}
+
+.start .start_login p.copyright a{
+    text-decoration: underline;
+    color: white;
+}
+
+/************************************
 MEDIA QUERY
 ************************************/
 
-@media only screen and (max-width: 991px) {
-
-    .container,
-    .small-container{
-        padding: 0 30px;
+@media only screen and (max-width: 1482px){
+    .container{
+        margin: 0 30px;
     }
+}
+
+@media only screen and (max-width: 1130px){
+    .small-container{
+        margin: 0 30px;
+    }
+}
+
+@media only screen and (max-width: 991px) {
 
     .hamburger{
         display: block;
+        padding: 0 15px;
     }
 
     .row.header ul{
@@ -483,6 +564,10 @@ MEDIA QUERY
     .info .box .col-6{
         flex-basis: 100%;
         text-align: left;
+    }
+
+    .info .phone-img{
+    margin: 0;
     }
 
     .planning .row{
@@ -522,13 +607,71 @@ MEDIA QUERY
     .benefits .card button {
     margin: 30px 0;
     }
+
+    .about-us .col-8{
+        flex-basis: calc((100% / 12) *7);
+    }
+
+    .about-us h1{
+    font-size: 8vw;
+    }
+
+    .about-us .col-4{
+        flex-basis: calc((100% / 12) *5);
+    }
+
+    .about-us .about-us-card img{
+        width: 90%;
+    }
+
+    .about-us .about-us-img i{
+    font-size: 7vw;
+    right: 5vw;
+    }
+
+    .about-us .row{
+    margin: 0 -50px;
+    }
+
+    .about-us .row> *{
+        padding: 0 50px;
+    }
+
+    .about-us .col-8 p{
+    padding-top: 75px;
+    line-height: 50px;
+    }
+
+    .start .start_titol h1{
+    font-size: 3rem;
+    }
+
+    .start .start_login h2{
+    font-size: 6rem;
+    }
+
+    .start .start_login a button{
+        font-size: 1rem;
+        line-height: 70px;
+    }
     
+}
+
+@media only screen and (max-width: 732px){
+    .extra-small-container{
+        margin: 0 15px;
+    }
 }
 
 @media only screen and (max-width: 575px) {
 
     .info [class^=col-]{
         flex-basis: 100%;
+    }
+
+    .info .phone-img{
+        width: 100%;
+        margin: 0 auto;
     }
 
     .testimonials .people-card .row{
@@ -572,4 +715,52 @@ MEDIA QUERY
     .benefits .col-4 p.index {
     line-height: 30px;  
     }
+
+    .about-us .col-8,
+    .about-us .col-4{
+        flex-basis: 100%;
+    }
+
+    .about-us h1{
+    font-size: 14vw;
+    }
+
+    .about-us .col-4{
+        padding-top: 60px;
+    }
+
+    .about-us .about-us-card img {
+    width: 70%;
+    }
+
+    .about-us .about-us-img i {
+    font-size: 14vw;
+    right: 30vw;
+    }
+
+    .about-us .col-8 p{
+    padding-top: 65px;
+    line-height: 45px;
+    }
+
+    .start .start_titol h1{
+    font-size: 2rem;
+    }
+
+    .start .start_login {
+    padding: 0 20px;
+    }
+
+    .start .start_login h2{
+    font-size: 3.5rem;
+    }
+
+    .start .start_login a button{
+        font-size: 1rem;
+        line-height: 60px;
+        padding: 0 75px;
+    }
+
+    
+
 }
