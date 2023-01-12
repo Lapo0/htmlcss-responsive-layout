@@ -75,6 +75,18 @@ Col
     flex-basis: 100%;
 }
 
+/*********
+button hover
+********/
+
+.transform{
+    transition: transform 0.2s;
+}
+
+.transform:hover{
+    transform: scale(1.1);
+}
+
 /***************************************
 HEADER
 ***************************************/
@@ -204,11 +216,11 @@ PLANNING
 }
 
 .planning .row{
-    margin: 0 -55px;
+    column-gap: 110px;
 }
 
-.planning .row .col-6{
-    padding: 0 55px;
+.planning .col-6 {
+    flex-basis: calc(((100% / 12)*6) - 110px/2);
 }
 
 .planning .col-6 .col-12:first-child{
@@ -241,6 +253,11 @@ PLANNING
 .planning-box .planning-img{
     width: 75%;
     margin: 0 auto;
+}
+
+.planning-box button.transform{
+    border: 0;
+    background-color: white;
 }
 
 .planning-box h3{
@@ -422,11 +439,15 @@ SECTION ABOUT US
 }
 
 .about-us .row{
-    margin: 0 -75px;
+    column-gap: 150px;
 }
 
-.about-us .row> *{
-    padding: 0 75px;
+.about-us .col-8{
+    flex-basis: calc(((100% / 12)*8) - 75px);
+}
+
+.about-us .col-4{
+    flex-basis: calc(((100% / 12)*4) - 75px);
 }
 
 .about-us h2{
@@ -500,6 +521,7 @@ START
 .start .start_titol h4{
     font-size: 20px;
     font-family: 'Wire One', sans-serif;
+    font-weight: lighter;
 }
 
 .start .start_titol h2{
@@ -565,16 +587,15 @@ footer{
 
 .footer .extra-small-container p a{
     text-decoration: underline;
-    font-size: 20px;
 }
 
 /************************************
 MEDIA QUERY
 ************************************/
 
-@media only screen and (max-width: 1482px){
+@media only screen and (max-width: 1530px){
     .container{
-        margin: 0 30px;
+        padding: 0 32px;
     }
 }
 
@@ -657,10 +678,6 @@ MEDIA QUERY
     .benefits h1{
         font-size: 45px;
     }
-    
-    .benefits .col-4 h2{
-    padding: 20px 0;
-    }
 
     .benefits .col-4 p:first-child{
     padding-top: 30px;
@@ -679,17 +696,27 @@ MEDIA QUERY
     margin: 30px 0;
     }
 
-    .about-us .col-8{
-        flex-basis: calc((100% / 12) *7);
+    
+    .about-us .row{
+        column-gap: 60px;
     }
 
-    .about-us h1{
-    font-size: 8vw;
+    .about-us .col-8{
+        flex-basis: calc(((100% / 12) *7) - 30px);
     }
 
     .about-us .col-4{
-        flex-basis: calc((100% / 12) *5);
+        flex-basis: calc(((100% / 12) *5) - 30px);
     }
+
+    .about-us h2{
+    font-size: 8vw;
+    }
+
+    .about-us .about-us-card h3 {
+        font-size: 30px;
+    }
+
 
     .about-us .about-us-card img{
         width: 90%;
@@ -700,20 +727,19 @@ MEDIA QUERY
     right: 5vw;
     }
 
-    .about-us .row{
-    margin: 0 -50px;
+    .about-us .about-us-card button {
+        line-height: 45px;
+        padding: 0 20px;
     }
 
-    .about-us .row> *{
-        padding: 0 50px;
-    }
 
     .about-us .col-8 p{
     padding-top: 75px;
     line-height: 50px;
+    font-size: 20px;
     }
 
-    .start .start_titol h1{
+    .start .start_titol h2{
     font-size: 3rem;
     }
 
@@ -721,10 +747,21 @@ MEDIA QUERY
     font-size: 6rem;
     }
 
+    .start .start_login p{
+        font-size: 20px;
+        line-height: 35px;
+    }
+
     .start .start_login a button{
         font-size: 1rem;
         line-height: 70px;
+        font-weight: 800;
     }
+
+    .start .start_login p.copyright {
+        font-size: 16px;
+    }
+
     
 }
 
@@ -740,9 +777,59 @@ MEDIA QUERY
         flex-basis: 100%;
     }
 
+    .info h3 {
+        font-size: 20px;
+    }
+
+    .info p {
+        padding: 30px 0;
+        font-size: 16px;
+    }
+
+    .info .col-4 .icon {
+        font-size: 75px;
+    }
+
     .info .phone-img{
         width: 100%;
         margin: 0 auto;
+    }
+
+    .planning .col-6 .col-12:first-child {
+        padding: 62px 0 82px 0;
+    }
+
+    .planning .col-6 .col-12 h3 {
+        padding-bottom: 55px;
+        font-size: 30px;
+    }
+
+    .planning .planning-box {
+        background-color: white;
+        padding: 40px 20px;
+    }
+
+    .planning-box h3 {
+        padding: 26px 0;
+        font-size: 23px;
+    }
+
+    .testimonials .titol {
+        padding: 0 15px;
+    }
+
+    .testimonials .titol h2 {
+        padding: 40px 0;
+        font-size: 30px;
+    }
+
+    .testimonials .titol p {
+        line-height: 30px;
+        font-size: 18px;
+    }
+
+    .testimonials .people-card .profile-img {
+    padding: 36px 12px 0;
     }
 
     .testimonials .people-card .row{
@@ -763,14 +850,16 @@ MEDIA QUERY
 
     
     .testimonials .profile-text blockquote{
-        padding-top: 0;
+        padding: 0;
+        font-size: 18px;
+        line-height: 35px;
     }
 
     .benefits .col-4{
         flex-basis: 100%;
     }
     
-    .benefits h1{
+    .benefits h2{
         font-size: 35px;
     }
 
@@ -792,7 +881,7 @@ MEDIA QUERY
         flex-basis: 100%;
     }
 
-    .about-us h1{
+    .about-us h2{
     font-size: 14vw;
     }
 
@@ -811,10 +900,11 @@ MEDIA QUERY
 
     .about-us .col-8 p{
     padding-top: 65px;
-    line-height: 45px;
+    line-height: 40px;
+    font-size: 18px;
     }
 
-    .start .start_titol h1{
+    .start .start_titol h2{
     font-size: 2rem;
     }
 
@@ -826,6 +916,11 @@ MEDIA QUERY
     font-size: 3.5rem;
     }
 
+    .start .start_login p {
+        font-size: 18px;
+        line-height: 30px;
+    }
+
     .start .start_login a button{
         font-size: 1rem;
         line-height: 60px;
@@ -833,7 +928,11 @@ MEDIA QUERY
     }
 
     .footer .extra-small-container {
-    padding: 0 20px;
+        padding: 0 20px;
+    }
+
+    .footer .extra-small-container p:first-child {
+        font-size: 16px;
     }
 
 }
